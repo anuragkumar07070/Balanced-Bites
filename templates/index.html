@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Balanced Bites</title>
+</head>
+
+<body>
+    
+        <header class="container">
+
+            <h1>Balanced Bites</h1>
+            <form class="form-inline" action="/search_food" method="get">
+                <input type="text" placeholder="Search..." id="search" name="query" class="form-inline-search">
+                <button type="submit" class="form-inline-button">Search</button>
+            </form>
+
+            <nav>
+                <ul class="nav-ul">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Fruits</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Vegetables</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Food</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                </ul>
+            </nav>
+            <hr>
+        </header>
+
+
+
+        <main>
+            <div class="main-heading">
+                <h3 id="heading3">Explore Nutritional Information</h3>
+                <p id="para">Discover the Nutritional values of various fruits, Vegetables and food</p>
+            </div>
+            <hr>
+
+
+            <section class="food-category">
+                <h2>Fruits</h2>
+
+                <div class="food-container">
+                    <div class="food-item-container">
+                        <a href="{{ url_for('food', food_name='apple') }}" class="food-item">
+                            <img src="/static/image/apple_image.jpg" alt="Apple">
+                            <span>Apple</span>
+                        </a>
+                    </div>
+
+                    <div class="food-item-container">
+                        <a href="{{ url_for('food', food_name='banana') }}" class="food-item">
+                            <img src="/static/image/banana_image.jpg" alt="Banana">
+                            <span>Banana</span>
+                        </a>
+                    </div>
+
+                    <div class="food-item-container">
+                        <a href="{{ url_for('food', food_name='orange') }}" class="food-item">
+                            <img src="/static/image/orange_image.jpg" alt="Orange">
+                            <span>Orange</span>
+                        </a>
+                    </div>
+
+                    <div class="food-item-container">
+                        <a href="{{ url_for('food', food_name='mango') }}" class="food-item">
+                            <img src="/static/image/mango_image.jpg" alt="Mango">
+                            <span>Mango</span>
+                        </a>
+                    </div>
+
+                    <div class="food-item-container">
+                        <a href="{{ url_for('food', food_name='strawberry') }}" class="food-item">
+                            <img src="/static/image/strawberry_image.jpg" alt="Strawberry">
+                            <span>Strawberry</span>
+                        </a>
+                    </div>
+
+                </div>
+            </section>
+            <hr>
+
+            <section class="food-category">
+                <h2>Vegetables</h2>
+
+                <div class="food-container">
+
+                    <div class="food-item-container">
+                        <a href="{{ url_for('food', food_name='tomato') }}" class="food-item">
+                            <img src="/static/image/tomato_image.jpg" alt="Tomato">
+                            <span>Tomato</span>
+                        </a>
+                    </div>
+
+                    <div class="food-item-container">
+                        <a href="{{ url_for('food', food_name='bellpepper') }}" class="food-item">
+                            <img src="/static/image/BellPepper_image.jpg" alt="Bell">
+                            <span>Bellpepper</span>
+                        </a>
+                    </div>
+
+                    <div class="food-item-container">
+                        <a href="{{ url_for('food', food_name='broccoli') }}" class="food-item">
+                            <img src="/static/image/Broccoli_image.jpg" alt="Broccoli">
+                            <span>Broccoli</span>
+                        </a>
+                    </div>
+
+                    <div class="food-item-container">
+                        <a href="{{ url_for('food', food_name='beans') }}" class="food-item">
+                            <img src="/static/image/beans_image.jpg" alt="Beans">
+                            <span>Beans</span>
+                        </a>
+                    </div>
+
+                    <div class="food-item-container">
+                        <a href="{{ url_for('food', food_name='carrot') }}" class="food-item">
+                            <img src="/static/image/carrot_image.jpg" alt="carrot">
+                            <span>Carrot</span>
+                        </a>
+                    </div>
+
+                </div>
+            </section>
+            <hr>
+
+
+            <section class="food-category">
+                <h2>Food</h2>
+
+                <div class="food-container">
+
+                    <div class="food-item-container">
+                        <a href="{{ url_for('food', food_name='burger') }}" class="food-item">
+
+                            <img src="/static/image/burger_image.jpg" alt="Burger">
+                            <span>Burger</span>
+
+                        </a>
+                    </div>
+
+                    <div class="food-item-container">
+                        <a href="{{ url_for('food', food_name='pasta') }}" class="food-item">
+                            <img src="/static/image/pasta_image.jpg" alt="Pasta">
+                            <span>Pasta</span>
+                        </a>
+                    </div>
+
+                    <div class="food-item-container">
+                        <a href="{{ url_for('food', food_name='salmon') }}" class="food-item">
+                            <img src="/static/image/salmon_image.jpg" alt="salmon">
+                            <span>Salmon</span>
+                        </a>
+                    </div>
+
+                    <div class="food-item-container">
+                        <a href="{{ url_for('food', food_name='pizza') }}" class="food-item">
+                            <img src="/static/image/pizza_image.jpg" alt="Pizza">
+                            <span>Pizza</span>
+                        </a>
+                    </div>
+
+                    <div class="food-item-container">
+                        <a href="{{ url_for('food', food_name='fries') }}" class="food-item">
+                            <img src="/static/image/fries_image.jpg" alt="fries">
+                            <span>Fries</span>
+                        </a>
+                    </div>
+
+                </div>
+            </section>
+            <hr>
+        </main>
+
+        <footer>
+            <div class="foot">
+                <p>&copy; 2024 Nutrition Facts</p>
+            </div>
+        </footer>
+
+
+</body>
+
+</html>
